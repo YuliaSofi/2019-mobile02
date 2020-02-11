@@ -3,6 +3,7 @@ package id.ac.polinema.androidlifecycle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ViewDebug;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,5 +27,29 @@ public class MainActivity extends AppCompatActivity {
 		super.onStop();
 		Toast.makeText(this, "App On Stop", Toast.LENGTH_SHORT).show();
 	}
-	// TODO: lengkapi callback untuk onRestart() onResume() onPause() onDestroy()
+	// TODO: lengkapi callback untuk onRestart()
+	@Override
+	protected void onRestart(){
+		super.onRestart();
+		Toast.makeText(this, "App On Restart", Toast.LENGTH_SHORT).show();
+	}
+	//  TODO: lengkapi callback untuk onResume()
+	@Override
+	protected void onResume(){
+		super.onResume();
+		Toast.makeText(this, "App On Resume", Toast.LENGTH_SHORT).show();
+	}
+	//  TODO: lengkapi callback untuk onPause()
+	@Override
+	protected void onPause(){
+		super.onPause();
+		Toast.makeText(this, "App On Pause", Toast.LENGTH_SHORT).show();
+	}
+	//  TODO: lengkapi callback untuk onDestroy()
+	@Override
+	protected void onDestroy(){
+		super.onDestroy();
+		Toast.makeText(this, "App On Destroy", Toast.LENGTH_SHORT).show();
+	}
 }
+/**/
